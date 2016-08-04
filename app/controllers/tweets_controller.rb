@@ -14,3 +14,8 @@ post '/users/:user_id/tweets' do
 end
 
 
+delete '/tweets/:id' do
+  tweet = Tweet.find(params[:id])
+  tweet.destroy
+  redirect to "/users/login"
+end

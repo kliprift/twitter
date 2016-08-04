@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, :presence => true, uniqueness: {case_sensitive: false, message: " was used before"}, :format => EMAIL_REGEX
   validates :password, :confirmation => true 
-  has_many :tweets  
+  has_many :tweets, dependent: :destroy 
   has_many :followers 
   
   has_secure_password
