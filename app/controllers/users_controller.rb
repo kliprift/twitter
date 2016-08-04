@@ -31,6 +31,22 @@ get '/users/login' do
     end
   end  
 
+get '/users/:user_id/edit' do
+  @user = current_user
+    if @user
+      session[:user_id] = @user.id
+      erb :"users/edit"
+    end
+end
+
+put '/users/:user_id' do
+
+  name = User.find(params[:user_id])
+  name.update(params[:user])
+  redirect('/users/login')
+end
+
+
 
 get '/signout' do
   session[:user_id] = nil

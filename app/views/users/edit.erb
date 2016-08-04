@@ -1,0 +1,27 @@
+<h2> Edit your profile <%= current_user.name.capitalize %> </h2> 
+<a href='/users/login'> Home </a> &nbsp;&nbsp; <a href="/users/<%= current_user.id%>/tweets/new">Post a new Tweet</a> &nbsp;&nbsp; <a href="/signout">Logout</a>
+<br>
+<br>
+
+<form action="/users/<%= @user.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+	<div class="container">
+	  <label><b>Name</b></label>
+
+	  <input name="user[name]" type="text" value="<%= @user.name %>"><br>
+
+	  <label><b>Email</b></label>
+
+	  <input name="user[email]" type="text" value="<%= @user.email %>"><br>
+	  
+	  <label><b>Password</b></label>
+
+	  <input type="password" name="user[password]" value="<%= @user.password %>"><br>
+
+	  <label><b>Confirm Password</b></label>
+
+	  <input type="password" name="user[password]" value="<%= @user.password %>"><br>
+	 
+	  <input type="submit" value="Update.">
+	</div>
+</form>
