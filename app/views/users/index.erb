@@ -13,14 +13,18 @@
 <tr align="center">
     <td><%= t.content %></td>
     <td><%= t.user.name %></td>
-    <td> <div class="delete_buttons">
-  <!-- add an delete button -->
-  <form action="/tweets/<%= t.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete!">
-  </form>
-</div></td>
+    <%if t.user == current_user %>
+    <td> 
+	    <div class="delete_buttons">
+	  <!-- add an delete button -->
+		  <form action="/tweets/<%= t.id %>" method="POST">
+		    <input type="hidden" name="_method" value="DELETE">
+		    <input type="submit" value="Delete!">
+		  </form>
+		</div>
+	</td>
  </tr>
+  <%end%>
   <%end%>
 </table>
 
