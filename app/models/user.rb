@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
   validates :password, :confirmation => true 
   has_many :tweets  
   has_many :followers 
+  
+  has_secure_password
  
 end
