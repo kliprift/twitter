@@ -3,8 +3,9 @@ get '/users/:user_id/tweets/new' do
 end
 
 post '/users/:user_id/tweets' do 
-  @user = User.find(params[:user_id])  
-  @tweet = @user.tweets.new(params[:tweet])
+  # @user = User.find(params[:user_id])  
+  # @tweet = @user.tweets.new(params[:tweet])
+ @tweet = current_user.tweets.new(params[:tweet])
     if @tweet.save
       redirect to '/users/login'
     else 
