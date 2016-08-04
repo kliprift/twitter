@@ -8,7 +8,7 @@ post '/users/:user_id/tweets' do
     if @tweet.save
       redirect to '/users/login'
     else 
-      @errors = @tweet.errors.full.full_messages
+      @errors = @tweet.errors.full_messages
     erb :"tweets/new"
   end
 end
