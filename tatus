@@ -1,0 +1,35 @@
+[33mcommit 9a6961b4160afe4c3bf171ae7867e1cd305f1e44[m
+Author: kliprift <eddie@worldone.com.my>
+Date:   Thu Aug 4 11:09:59 2016 +0800
+
+    added user migration , dbcreate and dbmigrate
+
+[33mcommit 5979ae3021d9baefbc1120c395227beebb4ea695[m
+Author: kliprift <eddie@worldone.com.my>
+Date:   Thu Aug 4 11:05:56 2016 +0800
+
+    added bcrypt in gemfile and add has_secure_password in user model
+
+[33mcommit bc06832de5d9b85cecadd2f782f9ea085978014d[m
+Author: kliprift <eddie@worldone.com.my>
+Date:   Thu Aug 4 11:03:14 2016 +0800
+
+    added user model
+
+[33mcommit f9e93dcc41b456d6ba3b3d0aaeb99eb7f9665011[m
+Author: kliprift <eddie@worldone.com.my>
+Date:   Thu Aug 4 10:28:30 2016 +0800
+
+    added byebug gem and added in init file
+
+[33mcommit 05f1ffd0d2dcdf98b75931513ce647ffe27be001[m
+Author: bestofthesoul <bestofthesoul@gmail.com>
+Date:   Thu Aug 4 09:36:23 2016 +0800
+
+    Update README.md
+
+[33mcommit 9d0a1c89cc91ca7870239183b8cc6990c11a7a86[m
+Author: bestofthesoul <bestofthesoul@gmail.com>
+Date:   Wed Aug 3 23:19:59 2016 +0800
+
+    test ready

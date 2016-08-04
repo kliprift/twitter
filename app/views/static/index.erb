@@ -1,2 +1,37 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+ <h2>Login</h2>
+ <%= @errors if @errors %>
+ <form action=/users/login method="POST">
+  
+  <div class="container">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="user[email]" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="user[password]" required>
+
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+
+
+ <h2>Signup</h2>
+ <%= @errors if @errors %>
+ <form action=/users/signup method="POST">
+  
+  <div class="container">
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter Username" name="user[name]" required>
+
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="user[email]" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="user[password]" required>
+
+    <label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="user[password]" required>
+
+    <button type="submit">Submit</button>
+  </div>
+</form>
