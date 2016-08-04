@@ -1,1 +1,20 @@
-<h2> if manage to login</h2>
+<h2> Welcome to your page <%= current_user.name.capitalize %> </h2> 
+<a href='/users/<%= current_user.id%>/edit'> Edit </a> &nbsp;&nbsp; <a href="/users/<%= current_user.id%>/tweets/new">Post a new Tweet</a> &nbsp;&nbsp; <a href="/signout">Logout</a>
+<br>
+<br>
+<table id="table1" border="0" width="75%" frame="void" rules="all" title = "Tweets">
+  <tr>
+    <th>Tweets</th>
+    <th>User</th>
+  </tr>
+  <tr></tr>
+<% Tweet.all.each do |t| %>
+<tr align="center">
+    <td><%= t.content %></td>
+    <td><%= t.user.name %></td>
+ </tr>
+  <%end%>
+</table>
+
+
+ 

@@ -38,8 +38,6 @@ get '/signout' do
 end 
 
 
-#post form for user signup
-
 
 
 
